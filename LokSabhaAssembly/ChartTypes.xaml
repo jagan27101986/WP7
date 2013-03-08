@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="LokSabhaAssembly.ChartTypes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,12,12,10">          
+            <TextBlock x:Name="PageTitle" Text="ANALYTICS" Margin="9,-7,0,0"  Foreground="Coral"
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Image Grid.Row="1" Source="Images/ico_2dcolumn.png" Height="200"  HorizontalAlignment="Left" Margin="14,18,0,0" Name="bar_image" Tap="bar_image_tap" Stretch="Fill" VerticalAlignment="Top" Width="213" />
+        <Image Height="200" Source="Images/ico_bubble.png" HorizontalAlignment="Left" Margin="250,18,0,14" Name="bubble_image"  Stretch="Fill" Tap="bubble_image_tap" VerticalAlignment="Top" Width="213" Grid.Row="1" />
+        <Image Height="200" Width="213" Source="Images/ico_funnel.png" Margin="14,240,2,0" Name="funnel_image" Stretch="Fill" Tap="funnel_image_tap" VerticalAlignment="Top" Grid.Row="1" />
+        <!--ContentPanel - place additional content here-->
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
